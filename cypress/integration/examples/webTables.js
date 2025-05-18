@@ -10,7 +10,7 @@ describe("My Second Test Suite", function () {
       if (text.includes("Python")) {
         cy.get("tr td:nth-child(2)")
           .eq(index)
-          .next()
+          .next() //can only use this to traverse to sibling with get()
           .then(function (price) {
             const priceText = price.text();
             expect(priceText).to.equal("26");
