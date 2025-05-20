@@ -1,3 +1,4 @@
+/// <reference types="cypress" />
 describe("Handling Child Tabs", () => {
   it("Should handle child Tabs", () => {
     cy.visit("/AutomationPractice/");
