@@ -5,6 +5,8 @@ cypress/videos/
 cypress/downloads/
 
 # macOS system files
+**/.DS_Store
+.DS_Store
 .DS_Store
 .DS_Store?
 ._*
