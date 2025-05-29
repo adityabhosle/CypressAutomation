@@ -3,6 +3,7 @@ cypress/reports/
 cypress/screenshots/
 cypress/videos/
 cypress/downloads/
+/node_modules
 
 # macOS system files
 **/.DS_Store
