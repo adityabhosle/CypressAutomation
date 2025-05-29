@@ -12,7 +12,6 @@ describe("End to End ecommerce Test", function () {
 
   it("Submit Order", function () {
     const productName = this.data.product;
-
     cy.visit("/loginpagePractise/");
     cy.log(this.data.username);
     const productPage = this.homepage.login(
