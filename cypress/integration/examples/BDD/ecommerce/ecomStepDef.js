@@ -15,6 +15,15 @@ When("I login into my eCom account", function () {
   this.productPage.getCardCount().should("have.length", 4);
 });
 
+When("I login into my eCom portal", function (dataTable) {
+  this.productPage = homePage.login(
+    dataTable.rawTable[1][0],
+    dataTable.rawTable[1][1]
+  );
+  this.productPage.pageValidation();
+  this.productPage.getCardCount().should("have.length", 4);
+});
+
 When("I add items to cart and checkout", function () {
   this.productPage.selectProduct(this.data.product);
   this.productPage.selectFirstProduct();
