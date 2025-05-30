@@ -8,13 +8,20 @@
     "chromeTest": "npx cypress run --browser chrome",
     "smoke": "npx cypress run --spec cypress/integration/examples/ExampleFramework.js"
   },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "cypress/cucumberReports/report.json"
+    }
+  },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "cypress": "^14.3.2",
     "cypress-iframe": "^1.0.1",
-    "cypress-mochawesome-reporter": "^3.8.2"
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "multiple-cucumber-html-reporter": "^3.9.2"
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
