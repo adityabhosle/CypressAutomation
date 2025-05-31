@@ -29,7 +29,7 @@ module.exports = defineConfig({
     runMode: 1,
   },
   e2e: {
-    specPattern: "cypress/integration/examples/**/*.feature",
+    specPattern: "cypress/integration/examples/*.js",
     baseUrl: "https://rahulshettyacademy.com/",
     setupNodeEvents,
   },
