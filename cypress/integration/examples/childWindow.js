@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 describe("Child window - opening in separte window", function () {
   it("Verify child window", function () {
-    cy.visit("/AutomationPractice/");
+    cy.visit(Cypress.env("url") + "/AutomationPractice/");
     cy.get("#opentab").then(function (e1) {
       const urlTest = e1.prop("href");
       cy.visit(urlTest); //qaclickacademy.com

@@ -29,3 +29,13 @@ Cypress.Commands.add("submitFormDetails", () => {
   cy.get(".suggestions ul li a").click();
   cy.get(".btn-success").click();
 });
+
+Cypress.Commands.add("loginAPI", () => {
+  cy.request("POST", Cypress.env("url") + "/client/auth/login", {
+    userEmail: "adityabhsl83@gmail.com",
+    userPassword: "Hello@123",
+  }).then((response) => {
+    expect(response.status).to.eq(200);
+    Cypress.env("token", response.body.token);
+  });
+});

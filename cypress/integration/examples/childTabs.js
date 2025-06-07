@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 describe("Handling Child Tabs", () => {
   it("Should handle child Tabs", () => {
-    cy.visit("/AutomationPractice/");
+    cy.visit(Cypress.env("url") + "/AutomationPractice/");
 
     cy.get("#opentab").invoke("removeAttr", "target").click();
 

@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 describe("Events Suite", function () {
   it("Verify window alerts", function () {
-    cy.visit("/AutomationPractice/");
+    cy.visit(Cypress.env("url") + "/AutomationPractice/");
     cy.get("#alertbtn").click();
     cy.get('[value="Confirm"]').click();
 

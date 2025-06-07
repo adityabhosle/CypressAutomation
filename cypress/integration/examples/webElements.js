@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 describe("Another Suite", function () {
   it("Checking Advanced Cypress", function () {
-    cy.visit("/AutomationPractice");
+    cy.visit(Cypress.env("url") + "/AutomationPractice/");
     cy.get("#checkBoxOption1")
       .check()
       .should("be.checked")

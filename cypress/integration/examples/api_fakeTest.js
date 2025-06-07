@@ -1,6 +1,6 @@
 describe("API Testing with Cypress", function () {
   beforeEach(() => {
-    cy.visit("/angularAppdemo/");
+    cy.visit(Cypress.env("url") + "/angularAppdemo/");
   });
 
   it("Verify response with stubbed response", function () {

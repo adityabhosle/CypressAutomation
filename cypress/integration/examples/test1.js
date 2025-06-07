@@ -2,7 +2,7 @@
 describe("My First Suite", function () {
   it("My First Test Case!", function () {
     // steps
-    cy.visit("/seleniumPractise/#/");
+    cy.visit(Cypress.env("url") + "/AutomationPractice/");
     cy.get(".search-keyword").type("ca");
     cy.get(".product:visible").should("have.length", 4);
     cy.get(".products").find(".product").should("have.length", 4);

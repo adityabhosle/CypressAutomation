@@ -5,7 +5,7 @@ import "cypress-iframe";
 
 describe("IFrames Suite", function () {
   it("Verify iframe", function () {
-    cy.visit("/AutomationPractice/");
+    cy.visit(Cypress.env("url") + "/AutomationPractice/");
 
     cy.frameLoaded("#courses-iframe"); // load the frame you want to work on first
     cy.iframe().find("a[href*=mentorship").eq(0).click();

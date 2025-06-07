@@ -24,13 +24,16 @@ async function setupNodeEvents(on, config) {
 module.exports = defineConfig({
   //projectId: "w7yu43",
   reporter: "cypress-mochawesome-reporter",
+  env: {
+    url: "https://rahulshettyacademy.com/",
+  },
 
   retries: {
     runMode: 1,
   },
   e2e: {
     specPattern: "cypress/integration/examples/*.js",
-    baseUrl: "https://rahulshettyacademy.com/",
+    //baseUrl: "https://rahulshettyacademy.com/",
     setupNodeEvents,
   },
 });
